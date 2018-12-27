@@ -7,7 +7,15 @@ import Index from "./router/index";
 import Home from "./router/home";
 import My from "./router/my";
 
-// alert(2);
+import classA from "./utils/class";
+import classB from "./utils/extends";
+
+// const instanceA = new classA();
+// console.log(instanceA, "---getA---");
+
+const instanceB = new classB();
+console.log(instanceB.getA(), "---instanceB1---");
+console.log(instanceB.getB(), "---instanceB2---");
 
 const GetBaidu = props => {
   let children = props.children;
