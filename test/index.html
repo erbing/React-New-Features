@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>边框0.5px实现方法</title>
+    <style type="text/css">
+      .container {
+        width: 500px;
+        margin: 0px auto;
+      }
+      .border-scale {
+        position: relative;
+        padding: 10px;
+      }
+
+      .border-scale:after {
+        content: "  ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #f00;
+        /* 如果不用 background-color, 使用 border-top:1px solid #f00; 效果是一样的*/
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>方案二：使用缩放</h3>
+      <div class="border-scale">原理： 在Y轴方向上，压缩一半。</div>
+    </div>
+  </body>
+</html>

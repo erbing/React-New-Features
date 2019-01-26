@@ -7,3 +7,43 @@
 .my {
   color: rosybrown;
 }
+.border1 {
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 80px;
+  border: 1px solid #999;
+}
+
+.border2 {
+  width: 200px;
+  height: 80px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 80px;
+  border: 0.5px solid #999;
+}
+
+.border3 {
+  width: 200px;
+  height: 80px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 80px;
+  position: relative;
+  &:after {
+    content: "  ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    /* 如果不用 background-color, 使用 border-top:1px solid #f00; 效果是一样的*/
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
