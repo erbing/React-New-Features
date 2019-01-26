@@ -6,6 +6,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import Index from "./router/index";
 import Home from "./router/home";
 import My from "./router/my";
+import Animation from "./router/animation";
 
 import classA from "./utils/class";
 import classB from "./utils/extends";
@@ -42,12 +43,16 @@ const App = () => {
       <h3>
         <Link to={"/my"}>my</Link>
       </h3>
+      <h3>
+        <Link to={"/animation"}>animation</Link>
+      </h3>
 
       <Switch>
         <GetBaidu>
           <Route exact path="/" component={Index} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/my" component={My} />
+          <Route exact path="/animation" component={Animation} />
         </GetBaidu>
       </Switch>
     </div>
