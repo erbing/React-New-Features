@@ -5,7 +5,7 @@ const Index = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // Update the document title using the browser API
+    // Update the document title using the browser API.
     document.title = `You clicked ${count} times`;
 
     let __requestAnimatioFram = window.requestAnimationFrame;
