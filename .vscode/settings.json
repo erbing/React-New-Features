@@ -1,3 +1,37 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "javascript.validate.enable": false,
+    "standard.options": {
+        "globals": ["$", "jQuery", "T", "fetch", "wx", "Page", "App", "abridge"],
+        "ignore": [
+            "node_modules/**",
+            "dist/"
+        ]
+    },
+    "standard.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue",
+        "vue-html",
+        {
+            "language": "html",
+            "autoFix": true
+        }
+    ],
+    "standard.autoFixOnSave": true,
+    "files.exclude": {
+        "**/.github": true,
+        "**/.vscode": true
+    },
+    "explorer.confirmDelete": false,
+    // "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#656565"
+    },
+    "search.exclude": {
+        "system/": true,
+        "!/system/**/*.ps*": true
+    }
 }
